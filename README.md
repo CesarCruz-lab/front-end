@@ -1,10 +1,11 @@
 # Front-End
 Projetos rápidos e legais de se aprender
 
-* Tecnologias básicas:
+__Tecnologias básicas__:
 - HTML;
 - CSS;
 - JavaScript.
 ___
-* Frameworks:
+
+__Frameworks__:
 - Jquery.
