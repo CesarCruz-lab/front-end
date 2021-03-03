@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F2F2F2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px; 
+}
+
+.title-page {
+  color: #444;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.search-box {
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+#search {
+  padding: 15px 25px;
+  border: none;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.posts {
+  max-width: 800px;
+  width: 80vw;
+  min-width: 300px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.post {
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  transition: .2s;
+}
+
+.post-title {
+  color: #444;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.post-body {
+  color: #444;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.post-body:first-letter {
+  text-transform: capitalize;
+}
+
+.number {
+  color: #A2A2A2;
+  font-weight: bold;
+  padding: 7px 12px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, .4);
+}
+
+.loader {
+  display: none;
+  position: relative;
+  opacity: 0;
+}
+
+.loader.show {
+  opacity: 1;
+  display: block;
+}
+
+.loader,
+.loader::after,
+.loader::before {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #444;
+  animation-name: curling;
+  animation-duration: 0.9s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; 
+  transition: .3s;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  position: absolute;
+}
+
+.loader::after {
+  top: -10px;
+  left: 10px;
+  animation-delay: .3s;
+}
+
+.loader::before {
+  top: -10px;
+  right: 10px;
+  animation-delay: .6s;
+}
+
+@keyframes curling {
+  from {
+    transform: translateY(-5px);
+  }
+  
+  50% {
+    transform: translateY(5px);
+  }
+  
+  to {
+    transform: translateY(-5px);
+  }
+}
