@@ -1,0 +1,150 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  background: linear-gradient(115deg, #111, #222, #111);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+#year-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#year-container::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  min-width: 35vw;
+  min-height: 35vw;
+  border: 6vw solid #FFAF0A;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 5px #222,
+    0 0 0 6px #F5F5F5;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 80vw;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.time {
+  margin: 10px;
+  /* background-color: rgba(255, 255, 255,.4); */
+}
+
+.title-maker {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #FFAF0A;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, .3);
+}
+
+.txt-style {
+  font-size: 40px;
+  text-align: center;
+  color: #FFF;
+  transform: skewY(-5deg);
+  text-shadow:
+    1px 1px 0px #DADADA,
+    1.5px 1.5px 0px #DADADA,
+    2px 2px 0px #DADADA,
+    2.5px 2.5px 0px #DADADA,
+    3px 3px 0px #DADADA,
+    3.5px 3.5px 0px #DADADA,
+    4px 4px 0px #DADADA,
+    4.5px 4.5px 0px #DADADA,
+    5px 5px 0px #DADADA,
+    5.5px 5.5px 0px #DADADA,
+    6px 6px 0px #DADADA,
+    6.5px 6.5px 0px #DADADA,
+    7px 7px 0px #DADADA,
+    7.5px 7.5px 0px #DADADA,
+    10px 10px 5px rgba(0, 0, 0, .5);
+}
+
+#year {
+  z-index: 1;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 26vw;
+  transform: skewY(-5deg);
+  text-shadow:
+    1px 1px 0px #DADADA,
+    1.5px 1.5px 0px #DADADA,
+    2px 2px 0px #DADADA,
+    2.5px 2.5px 0px #DADADA,
+    3px 3px 0px #DADADA,
+    3.5px 3.5px 0px #DADADA,
+    4px 4px 0px #DADADA,
+    4.5px 4.5px 0px #DADADA,
+    5px 5px 0px #DADADA,
+    5.5px 5.5px 0px #DADADA,
+    6px 6px 0px #DADADA,
+    6.5px 6.5px 0px #DADADA,
+    7px 7px 0px #DADADA,
+    7.5px 7.5px 0px #DADADA,
+    8px 8px 0px #DADADA,
+    8.5px 8.5px 0px #DADADA,
+    9px 9px 0px #DADADA,
+    9.5px 9.5px 0px #DADADA,
+    10px 10px 0px #DADADA,
+    15px 15px 10px rgba(0, 0, 0, .5);
+  animation: floating 3s ease-in-out infinite;
+}
+
+.star {
+  position: absolute;
+  z-index: -2;
+  display: block;
+  border-radius: 50%; 
+  background: #FFF;
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 1),
+    0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 1),
+    0 0 40px rgba(255, 255, 255, 1);
+  animation: light ease-in-out infinite;
+  transition: animation .3s;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: skewY(-5deg) translate(0, -10px);
+  }
+  50% {
+    transform: skewY(-5deg) translate(0, 10px);
+  }
+}
+
+@keyframes light {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  
+  50%, 90% {
+    opacity: 1;
+  }
+}
