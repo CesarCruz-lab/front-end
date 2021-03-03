@@ -1,5 +1,5 @@
 # Front-End
-Projetos rápidos e legais de se aprender
+Projetos rápidos, simples e legais de se aprender
 
 __Tecnologias básicas__:
 - HTML;
